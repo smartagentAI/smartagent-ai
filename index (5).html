@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartAgent AI - 300+ Ways to Make Money With ChatGPT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #00d4ff;
+            --secondary-color: #ff6b35;
+            --accent-color: #00ff88;
+            --dark-bg: #0a0e1e;
+            --darker-bg: #050810;
+            --card-bg: #0f1428;
+            --text-primary: #ffffff;
+            --text-secondary: #a8b5d1;
+            --border-color: #1a2547;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation & Tabs */
+        nav {
+            background-color: rgba(5, 8, 16, 0.99);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--border-color);
+            backdrop-filter: blur(15px);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        nav li {
+            border-right: 1px solid var(--border-color);
+        }
+
+        nav li:last-child {
+            border-right: none;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+            padding: 0.8rem 1.8rem;
+            display: block;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+            background-color: rgba(0, 212, 255, 0.08);
+        }
+
+        nav a.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            background-color: rgba(0, 212, 255, 0.05);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Home Section */
+        #home {
+            background: linear-gradient(135deg, rgba(10, 14, 30, 0.88) 0%, rgba(15, 20, 40, 0.88) 100%), url('https://images.unsplash.com/photo-1677442d019cecf8cfd1a1eb77ccd55f4b1b51d0?w=1600&h=900&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.12), transparent);
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+
+        #home::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.08), transparent);
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+
+        .hero-section {
+            padding: 6rem 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, #00d4ff, #00a8cc);
+            color: #000;
+            text-decoration: none;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.4);
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 60px rgba(0, 212, 255, 0.6);
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, rgba(15, 20, 40, 0.5) 0%, rgba(10, 14, 30, 0.5) 100%);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-card:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Why Choose Section */
+        .why-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, rgba(10, 14, 30, 0.6) 0%, rgba(15, 20, 40, 0.6) 100%);
+        }
+
+        .why-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .why-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .why-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        .why-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .why-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .why-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, rgba(15, 20, 40, 0.5) 0%, rgba(10, 14, 30, 0.5) 100%);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .testimonial-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #000;
+            font-size: 1.3rem;
+        }
+
+        .author-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .author-info p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .star-rating {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Earning Potential Section */
+        .earnings-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, rgba(10, 14, 30, 0.6) 0%, rgba(15, 20, 40, 0.6) 100%);
+        }
+
+        .earnings-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .earnings-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .earnings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .earning-card {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 255, 136, 0.05) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .earning-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.15);
+        }
+
+        .earning-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .earning-amount {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .earning-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .home-cta-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 255, 136, 0.05) 100%);
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            text-align: center;
+        }
+
+        .home-cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .home-cta-section p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Guide/Categories Section */
+        #guide {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, rgba(10, 14, 30, 0.92) 0%, rgba(15, 20, 40, 0.92) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=900&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        #guide h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .guide-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 360px;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #00d4ff, #00a8cc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .category-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover .category-image img {
+            transform: scale(1.08);
+        }
+
+        .category-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .category-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .category-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.25);
+        }
+
+        /* About Section */
+        #about {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, rgba(10, 14, 30, 0.92) 0%, rgba(15, 20, 40, 0.92) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=900&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        #about h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--primary-color);
+            margin: 2rem 0 1.2rem 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .about-text ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .about-text li {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .about-text li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #00d4ff, #00a8cc);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 212, 255, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* FAQ Section */
+        #faq {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, rgba(10, 14, 30, 0.92) 0%, rgba(15, 20, 40, 0.92) 100%), url('https://images.unsplash.com/photo-1556656793-08538906a9f8?w=1600&h=900&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        #faq h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .faq-item.active {
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.2);
+        }
+
+        .faq-question {
+            padding: 1.8rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            background: var(--card-bg);
+        }
+
+        .faq-question:hover {
+            background-color: rgba(0, 212, 255, 0.06);
+        }
+
+        .faq-question h3 {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .faq-toggle {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.8rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 600px;
+            padding: 0 1.8rem 1.8rem 1.8rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        /* SELLING PAGE */
+        #selling {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(10, 20, 40, 0.95) 0%, rgba(20, 10, 40, 0.95) 100%), url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=900&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        #selling::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(0, 255, 136, 0.05) 100%);
+            pointer-events: none;
+        }
+
+        .selling-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .selling-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .selling-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .selling-left h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .selling-left p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .selling-benefits {
+            list-style: none;
+            margin: 2rem 0 3rem 0;
+        }
+
+        .selling-benefits li {
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            padding-left: 2.5rem;
+            position: relative;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .selling-benefits li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .selling-right {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.12) 0%, rgba(0, 255, 136, 0.08) 100%);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 25px;
+            padding: 3.5rem;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.15);
+        }
+
+        .selling-right::before {
+            content: '⭐ EXCLUSIVE LAUNCH OFFER';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            color: white;
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .selling-right::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .price-container {
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .original-price-selling {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            text-decoration: line-through;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .discount-percentage {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .price-now {
+            font-size: 5.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            letter-spacing: -2px;
+        }
+
+        .price-period-selling {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .selling-features {
+            list-style: none;
+            margin: 3rem 0 3rem 0;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .selling-features li {
+            color: var(--text-secondary);
+            padding: 0.9rem 0;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .selling-features li:before {
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .timer-selling {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2) 0%, rgba(255, 107, 53, 0.1) 100%);
+            border: 2px solid #ff6b35;
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin-bottom: 2.5rem;
+            color: #ff8c42;
+            font-weight: 700;
+            font-size: 1.25rem;
+            text-align: center;
+            animation: pulse 2s infinite;
+            letter-spacing: 0.5px;
+        }
+
+        .buy-button-selling {
+            width: 100%;
+            padding: 1.8rem;
+            background: linear-gradient(135deg, #00d4ff, #00a8cc);
+            color: #000;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.4);
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            display: block;
+            text-align: center;
+        }
+
+        .buy-button-selling:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 60px rgba(0, 212, 255, 0.6);
+        }
+
+        .guarantee-badge {
+            background: rgba(0, 255, 136, 0.12);
+            border: 1.5px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 1.2rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, rgba(10, 14, 30, 0.92) 0%, rgba(15, 20, 40, 0.92) 100%), url('https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1600&h=900&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        #contact h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            background: linear-gradient(135deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .contact-image {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #00d4ff, #00a8cc);
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.2);
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.25);
+        }
+
+        .contact-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .contact-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .contact-card a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--darker-bg);
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .selling-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            nav ul {
+                gap: 0;
+            }
+
+            nav a {
+                padding: 0.8rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            nav li {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            nav li:last-child {
+                border-bottom: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            #guide h2, #about h2, #faq h2, #contact h2 {
+                font-size: 2rem;
+            }
+
+            .selling-left h1 {
+                font-size: 2.2rem;
+            }
+
+            .price-now {
+                font-size: 3.5rem;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            .selling-right {
+                padding: 2rem;
+            }
+
+            .selling-container {
+                padding: 0 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-section h2, .earnings-section h2, .testimonials-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">SmartAgent AI</a>
+            <ul>
+                <li><a href="#" class="nav-link active" onclick="showTab(event, 'home')">Home</a></li>
+                <li><a href="#" class="nav-link" onclick="showTab(event, 'guide')">Guide</a></li>
+                <li><a href="#" class="nav-link" onclick="showTab(event, 'about')">About</a></li>
+                <li><a href="#" class="nav-link" onclick="showTab(event, 'faq')">FAQ</a></li>
+                <li><a href="#" class="nav-link" onclick="showTab(event, 'selling')">Offer</a></li>
+                <li><a href="#" class="nav-link" onclick="showTab(event, 'contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Tab -->
+    <section id="home" class="tab-content active">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Master AI Income Generation</h1>
+                    <p>300+ proven ways to make money with ChatGPT across 14 major industries. Complete implementation guide with ready-to-use prompts, pricing strategies, and client acquisition tactics.</p>
+                    <button class="cta-button" onclick="showTab(event, 'selling')">Get Access Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">800M+</div>
+                        <div class="stat-label">ChatGPT Weekly Active Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2.5B</div>
+                        <div class="stat-label">Daily AI Prompts Processed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">₹100K+</div>
+                        <div class="stat-label">Monthly Income Potential</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">28%</div>
+                        <div class="stat-label">Higher Salary with AI Skills</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2x</div>
+                        <div class="stat-label">Faster Revenue Growth</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">$300B</div>
+                        <div class="stat-label">OpenAI Valuation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us Section -->
+        <div class="why-section">
+            <div class="container">
+                <h2>Why This Guide Is Different</h2>
+                <p class="why-subtitle">Learn from proven frameworks used by successful AI entrepreneurs generating 6-figure incomes</p>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-card-icon">⚡</div>
+                        <h3>Start in 24 Hours</h3>
+                        <p>No waiting. No complex setup. Get instant access to ready-to-use prompts and start earning within 24-48 hours of purchase.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">💰</div>
+                        <h3>Multiple Income Streams</h3>
+                        <p>Don't rely on one method. Pick 3-5 income strategies that match your strengths and build diversified revenue sources.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">📊</div>
+                        <h3>300+ Proven Methods</h3>
+                        <p>Not generic ChatGPT tips. Real, business-ready methods across 14 industries with exact pricing and implementation steps.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">👥</div>
+                        <h3>10,000+ Success Stories</h3>
+                        <p>Join thousands of professionals who've built sustainable AI-powered income. Real results from real people in real markets.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">🎯</div>
+                        <h3>Exact Pricing Models</h3>
+                        <p>Know exactly what to charge clients for each service. Industry-standard rates that maximize your profitability from day one.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-card-icon">🛡️</div>
+                        <h3>30-Day Money-Back</h3>
+                        <p>Risk-free investment. If you don't make your money back within 30 days, we refund 100%. No questions asked.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Earning Potential Section -->
+        <div class="earnings-section">
+            <div class="container">
+                <h2>Real Income Potential</h2>
+                <p class="earnings-subtitle">Actual earnings from proven AI income methods - start with one, scale to multiple income streams</p>
+                <div class="earnings-grid">
+                    <div class="earning-card">
+                        <h3>📝 Email Copywriting</h3>
+                        <div class="earning-amount">₹5,000-15,000</div>
+                        <div class="earning-description">Per client project - Easiest to start, fastest to implement</div>
+                    </div>
+                    <div class="earning-card">
+                        <h3>📚 Digital Course Creation</h3>
+                        <div class="earning-amount">₹50,000+</div>
+                        <div class="earning-description">Monthly passive income - Build once, earn repeatedly</div>
+                    </div>
+                    <div class="earning-card">
+                        <h3>🤖 AI Chatbot Setup</h3>
+                        <div class="earning-amount">₹10,000-25,000</div>
+                        <div class="earning-description">Per business - High demand, easy scaling</div>
+                    </div>
+                    <div class="earning-card">
+                        <h3>💼 Consulting Services</h3>
+                        <div class="earning-amount">₹200,000+</div>
+                        <div class="earning-description">Monthly retainers - Premium pricing for AI expertise</div>
+                    </div>
+                    <div class="earning-card">
+                        <h3>📊 Content Creation</h3>
+                        <div class="earning-amount">₹20,000-50,000</div>
+                        <div class="earning-description">Monthly projects - Unlimited client potential</div>
+                    </div>
+                    <div class="earning-card">
+                        <h3>🎨 Design Services</h3>
+                        <div class="earning-amount">₹2,000-10,000</div>
+                        <div class="earning-description">Per project - Fast turnaround, high volume</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="testimonials-section">
+            <div class="container">
+                <h2>Trusted by 10,000+ Professionals</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-text">"I made ₹3 lakhs in my first month after implementing 3 methods from this guide. The prompts are production-ready and actually work!"</div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RJ</div>
+                            <div class="author-info">
+                                <h4>Rajesh Jain</h4>
+                                <p>Freelance Copywriter</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-text">"As a complete beginner with AI, this guide made everything simple. Now running 2 income streams and earning ₹1.5 lakhs monthly."</div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PR</div>
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Content Creator</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-text">"Set up 4 AI chatbots for local businesses in 2 weeks. Each brings ₹25K monthly. This is the fastest ROI I've found."</div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AK</div>
+                            <div class="author-info">
+                                <h4>Amit Kumar</h4>
+                                <p>AI Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="home-cta-section">
+            <div class="container">
+                <h2>Ready to Transform Your Income?</h2>
+                <p>Join 10,000+ professionals who've already started their AI income journey. Limited time offer: Save 87% (₹399 instead of ₹2,999)</p>
+                <button class="cta-button" onclick="showTab(event, 'selling')">Access All 300+ Methods Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guide Tab -->
+    <section id="guide" class="tab-content">
+        <div class="container">
+            <h2>14 Income Categories Covered</h2>
+            <p class="guide-subtitle">Explore 14 major income categories with 300+ ways to earn. Discover how ChatGPT can help you generate income in each niche with proven strategies and real implementations.</p>
+            
+            <div class="categories">
+                <!-- 1. Social Media Content -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1767873238/search_images/1741bd783a8ea2e68240e8ae563a2baa86a985d4.jpg" alt="Social Media Marketing">
+                    </div>
+                    <div class="category-content">
+                        <h3>Social Media Content</h3>
+                        <p>Content strategies, hashtag planning, engagement tactics, social management</p>
+                    </div>
+                </div>
+
+                <!-- 2. Customer Service -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop" alt="Customer Service">
+                    </div>
+                    <div class="category-content">
+                        <h3>Customer Service Automation</h3>
+                        <p>Chatbots, email templates, live chat scripts, FAQ creation, support automation</p>
+                    </div>
+                </div>
+
+                <!-- 3. Education -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop" alt="Education">
+                    </div>
+                    <div class="category-content">
+                        <h3>Education & Training</h3>
+                        <p>Online courses, e-books, webinars, tutoring plans, curriculum development</p>
+                    </div>
+                </div>
+
+                <!-- 4. Creative Writing -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop" alt="Creative Writing">
+                    </div>
+                    <div class="category-content">
+                        <h3>Creative Content</h3>
+                        <p>Story writing, poetry, scriptwriting, game design, graphic design concepts</p>
+                    </div>
+                </div>
+
+                <!-- 5. Business Services -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=250&fit=crop" alt="Business Services">
+                    </div>
+                    <div class="category-content">
+                        <h3>Business Services</h3>
+                        <p>Business plans, market research, consulting services, project management</p>
+                    </div>
+                </div>
+
+                <!-- 6. E-commerce -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=400&h=250&fit=crop" alt="E-commerce">
+                    </div>
+                    <div class="category-content">
+                        <h3>E-Commerce & Sales</h3>
+                        <p>Product descriptions, digital courses, dropshipping, affiliate marketing</p>
+                    </div>
+                </div>
+
+                <!-- 7. Research & Analysis -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="Research">
+                    </div>
+                    <div class="category-content">
+                        <h3>Research & Analysis</h3>
+                        <p>Market research, competitor analysis, financial reports, white papers</p>
+                    </div>
+                </div>
+
+                <!-- 8. Workflow Automation -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1762961736/search_images/b5d655a5b0977815b9d701da597b7467f3b7d241.jpg" alt="Automation">
+                    </div>
+                    <div class="category-content">
+                        <h3>Workflow Automation</h3>
+                        <p>Workflow automation, email automation, CRM setup, marketing automation</p>
+                    </div>
+                </div>
+
+                <!-- 9. Gaming & Entertainment -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1763917704/search_images/1c452cc15795f43aa361f3c4f0bb2f03826f36f8.jpg" alt="Gaming & Entertainment">
+                    </div>
+                    <div class="category-content">
+                        <h3>Gaming & Entertainment</h3>
+                        <p>Game design, streaming content, walkthroughs, esports analysis</p>
+                    </div>
+                </div>
+
+                <!-- 10. Financial Services -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1765799139/search_images/180179977e5936c0bacbd21b37dffe0196f3a8be.jpg" alt="Finance">
+                    </div>
+                    <div class="category-content">
+                        <h3>Financial Services</h3>
+                        <p>Financial planning, investment research, tax planning, wealth management</p>
+                    </div>
+                </div>
+
+                <!-- 11. Legal Services -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1766033058/search_images/739ac904c7e231936eb08409b477aced11a8fdb1.jpg" alt="Legal">
+                    </div>
+                    <div class="category-content">
+                        <h3>Legal Services</h3>
+                        <p>Contract drafting, legal research, compliance audits, policy creation</p>
+                    </div>
+                </div>
+
+                <!-- 12. Health & Wellness -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1767872869/search_images/0054229f8054ceaef9736bb88e16cbddb71d2abc.jpg" alt="Health">
+                    </div>
+                    <div class="category-content">
+                        <h3>Health & Wellness</h3>
+                        <p>Mental health guides, health coaching, wellness plans, nutrition content</p>
+                    </div>
+                </div>
+
+                <!-- 13. Coaching & Training -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1763103333/search_images/6499a8176889fe7dbf81f1c8a90b1d55a2f57372.jpg" alt="Coaching">
+                    </div>
+                    <div class="category-content">
+                        <h3>Coaching & Training</h3>
+                        <p>Coaching programs, workshops, mentorship, leadership training</p>
+                    </div>
+                </div>
+
+                <!-- 14. Copywriting & Translation -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1767872869/search_images/b3ad5219b32819a41e3de92a3c565e3411a86824.jpg" alt="Copywriting">
+                    </div>
+                    <div class="category-content">
+                        <h3>Copywriting & Translation</h3>
+                        <p>Copywriting, translation, multilingual content, cultural consultation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Tab -->
+    <section id="about" class="tab-content">
+        <div class="container">
+            <h2>Why This Guide Changes Everything</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Not Just ChatGPT Basics</h3>
+                    <p>This guide covers 300+ specific, actionable ways to make money across 14 industries. Each method includes prompts, pricing, and implementation details that professionals are already using to generate significant income.</p>
+                    
+                    <h3>Start Earning Today</h3>
+                    <p>Ready-to-use prompts, proven pricing strategies, and client acquisition tactics. You're not waiting to "finish learning"—you start monetizing immediately with the exact frameworks used by top earners.</p>
+                    
+                    <h3>Diversified Income</h3>
+                    <p>Why rely on one skill? Pick 3-5 methods that match your strengths and build multiple revenue sources. Reduce risk, increase earnings potential, and create sustainable long-term income streams.</p>
+
+                    <h3>Key Features:</h3>
+                    <ul>
+                        <li>300+ specific income methods with step-by-step guides</li>
+                        <li>Ready-to-use ChatGPT prompts for immediate implementation</li>
+                        <li>Industry-standard pricing for maximizing profitability</li>
+                        <li>Step-by-step implementation guides for each method</li>
+                        <li>Real-world case studies and success stories</li>
+                        <li>Client acquisition strategies and sales frameworks</li>
+                        <li>30-day money-back guarantee - risk-free</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1767873238/search_images/8c7455b283da6053707e89afc325e9a880480496.jpg" alt="About SmartAgent AI">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Tab -->
+    <section id="faq" class="tab-content">
+        <div class="container">
+            <h2>Everything You Need to Know</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do I need to be a ChatGPT expert?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. If you can use ChatGPT at a basic level, you can implement these methods. The guide assumes no advanced technical knowledge. It focuses on practical business applications, not AI coding or machine learning. Anyone with basic computer skills can start earning within 24 hours.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How much can I realistically earn?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It depends on which methods you choose and how much effort you invest. Email copywriting can generate ₹5,000-15,000 per client. Course creation generates ₹50,000+ monthly in passive income. Consulting services can be ₹200,000+/month. Most people implement 3-5 methods simultaneously for ₹100,000+ monthly income.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How quickly can I start earning?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can start earning within 24-48 hours. Some methods (like freelance writing on Upwork or Fiverr) require just setting up a profile. Others (like email sequences for clients) can be completed in 2-3 hours using the prompts included in this guide. You don't have to complete the entire guide to start generating income.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Is using ChatGPT-assisted work legal and ethical?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, completely legal and ethical. You're using ChatGPT as a tool to improve productivity—just like using Excel or Photoshop. Every method in this guide is a legitimate business service. Disclosure is important: when you use ChatGPT-assisted work, be transparent with clients about your process. Most appreciate the quality and faster turnaround.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How do I find clients?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The guide includes client acquisition strategies for each method. Platforms like Fiverr, Upwork, and Freelancer have thousands of people actively looking for these services right now. You can also reach out directly to small business owners, coaches, and entrepreneurs who need these services. Done right, you have more client inquiries than you can handle.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can I do this as a side hustle?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Most methods in this guide can be done in 5-10 hours per week. Email sequences take 2-3 hours. Product descriptions take 30 minutes each. Course creation can be done on weekends. Many people start as a side hustle and transition to full-time once they have 3-4 paying clients.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What if one method becomes saturated?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The guide includes 300+ methods. Even if one category becomes saturated, you have 13 others to focus on. Plus, demand for quality AI-assisted services is growing exponentially. Companies aren't looking for the cheapest option—they're looking for fast, quality results. That's your advantage.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What tools do I need?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most methods need only ChatGPT (₹20/month) and a freelancing account (free to set up). Some optional tools are mentioned (Fiverr, Upwork, Gumroad) but none are required. You can literally start with just ChatGPT and a laptop. The guide includes links to everything you need.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How is this different from other ChatGPT courses?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most ChatGPT courses teach you HOW to use ChatGPT. This guide teaches you HOW TO MAKE MONEY with it. It includes 300+ specific business applications, proven pricing, client acquisition strategies, and ready-to-use prompts. It's a business guide first, ChatGPT guide second.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELLING PAGE -->
+    <section id="selling" class="tab-content">
+        <div class="selling-container">
+            <!-- Left Side -->
+            <div class="selling-left">
+                <h1>300+ Ways to Make Money With ChatGPT</h1>
+                <p>The complete guide trusted by 10,000+ working professionals to build multiple AI-powered income streams. Start earning within 24-48 hours using proven methods that actually work.</p>
+                
+                <ul class="selling-benefits">
+                    <li>300+ specific income methods across 14 categories</li>
+                    <li>Ready-to-use ChatGPT prompts for instant implementation</li>
+                    <li>Industry-standard pricing for maximum profitability</li>
+                    <li>Real-world case studies and success stories</li>
+                    <li>Step-by-step guides for complete beginners</li>
+                    <li>Client acquisition & sales strategies included</li>
+                    <li>30-day money-back guarantee - 100% risk-free</li>
+                </ul>
+            </div>
+
+            <!-- Right Side -->
+            <div class="selling-right">
+                <div class="price-container">
+                    <div class="original-price-selling">Regular Price: ₹2,999</div>
+                    <div class="discount-percentage">SAVE 87%</div>
+                    <div class="price-now">₹399</div>
+                    <div class="price-period-selling">One-time lifetime access</div>
+                </div>
+
+                <div class="timer-selling" id="timerSelling">
+                    ⏱️ Offer expires in 72h 0m 0s
+                </div>
+
+                <ul class="selling-features">
+                    <li>Instant digital delivery</li>
+                    <li>Lifetime access (no subscription)</li>
+                    <li>Future updates included</li>
+                    <li>Private community access</li>
+                    <li>Email support included</li>
+                    <li>30-day money-back guarantee</li>
+                </ul>
+
+                <a href="https://superprofile.bio/smartagent" class="buy-button-selling" target="_blank">
+                    💳 Buy Now - ₹399 Only
+                </a>
+
+                <div class="guarantee-badge">
+                    ✓ 30-Day Money-Back Guarantee<br>
+                    Complete refund if not satisfied
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Tab -->
+    <section id="contact" class="tab-content" style="display: none;">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            
+            <div class="contact-image">
+                <img src="https://pplx-res.cloudinary.com/image/upload/v1767873239/search_images/43ac821364bf05cbb6fa08a8c5e0ecf108496524.jpg" alt="Contact Us">
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📞 Call Us Directly</h3>
+                    <p>For urgent queries and support</p>
+                    <a href="tel:7708319024">+91 7708319024</a>
+                </div>
+
+                <div class="contact-card">
+                    <h3>✉️ Email Support</h3>
+                    <p>For all inquiries and questions</p>
+                    <a href="mailto:smartagent510@gmail.com">smartagent510@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <h3>📱 Follow on Instagram</h3>
+                    <p>Connect and get daily tips</p>
+                    <a href="https://instagram.com/smartagent29" target="_blank">@smartagent29</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SmartAgent AI. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(event, tabName) {
+            event.preventDefault();
+            
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+                content.style.display = 'none';
+            });
+            
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            const selectedTab = document.getElementById(tabName);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+                selectedTab.style.display = 'block';
+            }
+            
+            event.target.classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            faqItem.classList.toggle('active');
+        }
+
+        // 72-Hour Countdown Timer
+        function updateTimer() {
+            const timerElement = document.getElementById('timerSelling');
+            if (!timerElement) return;
+
+            const startTime = localStorage.getItem('offerStartTime');
+            const now = new Date().getTime();
+            let elapsed = 0;
+
+            if (startTime) {
+                elapsed = Math.floor((now - parseInt(startTime)) / 1000);
+            } else {
+                localStorage.setItem('offerStartTime', now);
+            }
+
+            const totalSeconds = 72 * 3600;
+            const remainingSeconds = Math.max(0, totalSeconds - elapsed);
+
+            const hours = Math.floor(remainingSeconds / 3600);
+            const minutes = Math.floor((remainingSeconds % 3600) / 60);
+            const seconds = remainingSeconds % 60;
+
+            timerElement.textContent = `⏱️ Offer expires in ${hours}h ${minutes}m ${seconds}s`;
+
+            if (remainingSeconds <= 0) {
+                timerElement.textContent = '⏱️ Offer Expired - Regular Price ₹2,999';
+                timerElement.style.borderColor = '#666';
+                timerElement.style.color = '#999';
+            }
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    </script>
+    <!-- Sticky Mobile Buy Button -->
+<div class="mobile-sticky-cta">
+  <a href="https://superprofile.bio/smartagent" target="_blank">
+    🚀 Get Instant Access for ₹399
+  </a>
+</div>
+</body>
+</html>
